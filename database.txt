@@ -1,0 +1,43 @@
+CREATE DATABASE teammanager;
+
+CREATE TABLE team(
+    id serial not null,
+    name varchar(100) not null,
+    country varchar(100) not null,
+    balance int not null,
+    commission int not null);
+
+
+CREATE TABLE player(
+    id serial not null,
+    name varchar(100) not null,
+    country varchar(100) not null,
+    age int not null,
+    exp int not null,
+    price int not null,
+    team varchar(100));
+
+
+
+insert into team(name, country, balance, commission) values('Dnipro', 'Ukraine', 5000000, 3);
+insert into team(name, country, balance, commission) values('Chelsea', 'England', 10000000, 5);
+insert into team(name, country, balance, commission) values('Barcelona', 'Spain', 600000000, 10);
+
+
+
+
+insert into player (name, country, age, exp, price, team) values ('Manon Sam', 'Indonesia', 45, 1, 40000, 'Dnipro');
+insert into player (name, country, age, exp, price, team) values ('Giorgi Ron', 'Mexico', 2, 24, 60005, 'Dnipro');
+insert into player (name, country, age, exp, price, team) values ('Desmund Johnson', 'Indonesia', 34, 3, 20000, 'Dnipro');
+insert into player (name, country, age, exp, price, team) values ('Katalin Ove', 'China', 32, 4, 100000, 'Dnipro');
+insert into player (name, country, age, exp, price, team) values ('Ashlie Doe', 'South Africa', 23, 5, 70000, 'Dnipro');
+insert into player (name, country, age, exp, price, team) values ('Russell Fovar', 'Portugal', 34, 6, 100000, 'Dnipro');
+insert into player (name, country, age, exp, price, team) values ('Marie-ann Fob', 'Democratic Republic of the Congo', 18, 7, 7, 'Chelsea');
+insert into player (name, country, age, exp, price, team) values ('Jeanie Nick', 'Russia', 37, 8, 7000, 'Chelsea');
+insert into player (name, country, age, exp, price, team) values ('Karen Iwol', 'Finland', 26, 9, 3000000, 'Chelsea');
+insert into player (name, country, age, exp, price, team) values ('Remus Sock', 'Ivory Coast', 29, 10, 60000, 'Chelsea');
+insert into player (name, country, age, exp, price, team) values ('Ramona Brain', 'China', 41, 11, 200000, 'Chelsea');
+insert into player (name, country, age, exp, price, team) values ('Boyd Fill', 'Ukraine', 29, 12, 96666, 'Barcelona');
+insert into player (name, country, age, exp, price, team) values ('Rodina Og', 'Portugal', 38, 13, 13000, 'Barcelona');
+insert into player (name, country, age, exp, price, team) values ('Cathee Zet', 'Guyana', 41, 14, 499999, 'Barcelona');
+insert into player (name, country, age, exp, price, team) values ('Valentin Lee', 'Brazil', 22, 15, 7000000, 'Barcelona');
