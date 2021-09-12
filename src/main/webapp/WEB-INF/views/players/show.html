@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <title>Player info</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    </head>
+    <body>
+
+    <div align="center">
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+        <div class="container-fluid">
+            <div class="collapse navbar-collapse" id="navbarsExample03">
+                <ul class="navbar-nav me-auto mb-2 mb-sm-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/teams">All teams</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/teams/new">Add team</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/players">All players</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/players/new">Add player</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+        <b>Name</b>
+        <p th:text="${player.getName()}">VALUE</p>
+        <hr>
+        <b>Country</b>
+        <p th:text="${player.getCountry()}">VALUE</p>
+        <hr>
+        <b>Team</b>
+        <br>
+        <a th:href="@{/teams/{id}(id=${team.getId()})}"
+           th:text="${team.getName()}">VALUE</a>
+        <hr>
+
+        <b>Age</b>
+        <p th:text="${player.getAge()}">VALUE</p>
+        <hr>
+        <b>Price</b>
+        <p th:text="${player.getPrice()}">VALUE</p>
+        <hr>
+        <b>ID</b>
+        <p th:text="${player.getId()}">VALUE</p>
+        <hr>
+
+        <a th:href="@{/players/{id}/edit(id=${player.getId()})}">Edit player</a>
+
+        <hr>
+        <form th:method="DELETE" th:action="@{/players/{id}(id=${player.getId()})}">
+            <input type="submit" value="Delete"/>
+        </form>
+    </div>
+    </body>
+</html>
