@@ -60,7 +60,7 @@ public class SpringConfig implements WebMvcConfigurer {
 
         dataSource.setUrl("jdbc:postgresql://localhost:5432/teammanager");
         dataSource.setUsername("postgres");
-        dataSource.setPassword("nazarqwerty1");
+        dataSource.setPassword(""); //enter the password
 
         return dataSource;
     }
