@@ -46,10 +46,4 @@ public class PlayerDao {
 
 
 
-    //public List<Player> playIn(Player player){
-    //    return jdbcTemplate.query("SELECT * FROM team WHERE team=?", new Object[]{player.getTeam()}, new BeanPropertyRowMapper<>(Player.class));
-    //}
-
-
-
 }

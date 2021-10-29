@@ -40,9 +40,6 @@ public class TeamDao {
         jdbcTemplate.update("DELETE FROM team WHERE id=?", id);
     }
 
-    //public List<Player> playIn(Team team){
-    //    return jdbcTemplate.query("SELECT * FROM player WHERE team=?", new Object[]{team.getName()}, new BeanPropertyRowMapper<>(Player.class));
-    //}
 
 
 
