@@ -54,9 +54,7 @@ public class PlayerController {
     }
 
     @PostMapping()
-    public String create(@ModelAttribute("player") @Valid Player player, BindingResult bindingResult){
-        if(bindingResult.hasErrors())
-            return "players/new";
+    public String create(@ModelAttribute("player") Player player){
         playerDao.create(player);
         return "redirect:/players";
 
@@ -70,9 +68,7 @@ public class PlayerController {
     }
 
     @PatchMapping("/{id}")
-    public String update(@ModelAttribute("player") @Valid Player player, BindingResult bindingResult, @PathVariable("id") int id){
-        if(bindingResult.hasErrors())
-            return "players/edit";
+    public String update(@ModelAttribute("player") Player player, @PathVariable("id") int id){
         playerDao.update(id, player);
         return "redirect:/players";
     }

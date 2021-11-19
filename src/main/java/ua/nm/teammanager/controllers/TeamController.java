@@ -65,10 +65,9 @@ public class TeamController {
     }
 
     @GetMapping("/{id}/edit")
-    public  String edit(@PathVariable("id") int id, @Valid Model model, BindingResult bindingResult){
-        if(bindingResult.hasErrors())
-            return "teams/edit";
+    public  String edit(@PathVariable("id") int id, Model model){
         model.addAttribute("team", teamDao.show(id));
+
         return "teams/edit";
     }
 
